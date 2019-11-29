@@ -1,5 +1,6 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from getpass import getpass
 
 # Connection to sheets
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
@@ -27,18 +28,18 @@ while session != "online":
     start = input("Type L to login or R to register: ")
     if start == "R":
         create_username = input("Choose your username: ")
-        create_password = input("Choose your password: ")
-        conf_pass = input("Confirm your password: ")
+        create_password = getpass("Choose your password: ")
+        conf_pass = getpass("Confirm your password: ")
         while conf_pass != create_password:
-            create_password = input("Password confirmed does not match. Please retype your password: ")
-            conf_pass = input("Retype it for confirmation: ")
+            create_password = getpass("Password confirmed does not match. Please retype your password: ")
+            conf_pass = getpass("Retype it for confirmation: ")
         print("Registration complete, you are now logged in.")
         user_data = [len(data) + 1, create_username, create_password]
         session = 'online'
         sheet.append_row(user_data)
     elif start == "L":
         login_username = input("Username: ")
-        login_password = input("Password: ")
+        login_password = getpass("Password: ")
         check = login_check(login_username, login_password)
         if check == "yes":
             session = "online"
