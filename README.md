@@ -3,7 +3,7 @@ A simple login system created with python and Google Sheets. This is a project I
 
 --------------------------------------------------------
 
-ABOUT IT.
+## ABOUT IT
 
 The login system is really basic, it runs basically inside a while loop that will only stop when the variable 'session' is equal to 'online'. When started the user has the option to Register or Login. For registering an username will be asked first, no character restrictions at all, then the password is requested, along with a confirmation of the first one typed. No characters restriction for now either.
 
@@ -17,14 +17,14 @@ For connecting to Google Sheets you need this JSON file I uploaded here, it has 
 
 --------------------------------------------------------
 
-HOW TO CONNECT YOUR OWN GOOGLE SHEETS TO THIS PROJECT OR YOUR OWN PROJECTS.
+## How to connect your own Google Sheets to this project or your own projects
 
 For connecting, first you need to go to https://console.cloud.google.com. There you should create a new project, name as you wish and save it. Now you will need 2 APIs from cloud console to get to work, search for Google Drive API first and activate it. After activating go to it and click on the button for creating credentials. There you will set the options as follows: 
 
-1st. Google Drive API
-2nd. Web server(e.g. node.js, Tomcat)
-3rd. Application data
-4th. No, I'm not using them
+1st. Google Drive API  
+2nd. Web server(e.g. node.js, Tomcat)  
+3rd. Application data  
+4th. No, I'm not using them  
 
 Then name yourself, role I guess could be any but "Project Editor" would fit nicely. On this page you will be fine for downloading the JSON file with your credentials.
 
@@ -34,11 +34,6 @@ Now run 'pip install gspread oauth2client' on your machine, make sure both gspre
 
 --------------------------------------------------------
 
-POSSIBLE FUTURE IMPROVEMENTS.
+It is important to mention again that the JSON file you get on Google Cloud Console for your project should NOT be shared, it contains private keys that could be used by others. For sharing this project here I created a dedicated Google account just for it. 
 
-- Password restrictions (minimum, maximum, special characters and other security stuff)
-- Username restrictions (min and max characters and fix being able to create usernames that already exists)
-- Possibly implementing it to a website using flask for other practice purposes.
-
-
-    Thanks for reading, I will appreciate tips and other comments on how to improve this or make anything I wrote even more simple.
+Thanks for reading, I will appreciate tips and other comments on how to improve this or make anything I wrote even more simple.
