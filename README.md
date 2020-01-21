@@ -1,5 +1,7 @@
 # login-system
-A simple login system created with python and Google Sheets. This is a project I just worked on for putting into practice my knowledge and logics. Below is basically everything about it, a tutorial on how to connect Google Sheets to your projects and my 'plans' for this on the future.
+A simple login system created with python and Google Sheets. This is a project I just worked on for putting into practice my knowledge and logics. 
+
+Below is basically everything about it, a tutorial on how to connect Google Sheets to your projects and my 'plans' for this on the future.
 
 --------------------------------------------------------
 
